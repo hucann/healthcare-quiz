@@ -1,0 +1,16 @@
+.quiz-screen {
+  width: 100%;
+}
+
+.quiz-header {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--light-text);
+}

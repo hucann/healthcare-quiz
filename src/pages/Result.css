@@ -1,0 +1,55 @@
+.level-complete-screen {
+  width: 100%;
+}
+
+.level-score-container {
+  background-color: var(--light-green);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.score-display {
+  font-size: 1.2rem;
+}
+
+.final-score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.level-score-message {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.level-complete-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.next-level-btn {
+  background-color: var(--secondary-color);
+}
+
+.next-level-btn:hover {
+  background-color: #2d8e47;
+}
+
+.saving-progress {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  color: var(--light-text);
+}
+
+@media (min-width: 768px) {
+  .level-complete-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

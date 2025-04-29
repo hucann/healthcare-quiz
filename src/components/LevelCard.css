@@ -1,0 +1,88 @@
+.level-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card:hover:not(.locked) {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.level-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.level-card p {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.level-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.status-completed {
+  background-color: var(--light-green);
+  color: var(--completed-color);
+}
+
+.status-unlocked {
+  background-color: #fff8e1;
+  color: var(--in-progress-color);
+}
+
+.status-locked {
+  background-color: #f1f3f4;
+  color: var(--light-text);
+}
+
+.level-card.locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.level-card.locked::before {
+  content: "🔒";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.level-card.locked .level-content {
+  filter: blur(2px);
+}
+
+.level-unlock-animation {
+  animation: unlockLevel 1s ease-out;
+}
+
+@keyframes unlockLevel {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(26, 115, 232, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(26, 115, 232, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

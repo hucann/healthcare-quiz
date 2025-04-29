@@ -1,0 +1,33 @@
+.feedback-container {
+  background-color: var(--light-blue);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.feedback-result {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-result.correct {
+  color: var(--success-color);
+}
+
+.feedback-result.incorrect {
+  color: var(--error-color);
+}
+
+.feedback-explanation {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.next-btn {
+  background-color: var(--secondary-color);
+}
+
+.next-btn:hover {
+  background-color: #2d8e47;
+}
