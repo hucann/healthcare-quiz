@@ -5,13 +5,13 @@ import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCRT2nzxYIFqqoW7bsHT9PB40eRDj9KSd0",
-  authDomain: "healthcare-tech-quiz.firebaseapp.com",
-  projectId: "healthcare-tech-quiz",
-  storageBucket: "healthcare-tech-quiz.firebasestorage.app",
-  messagingSenderId: "542517999521",
-  appId: "1:542517999521:web:29f91f6f25309b76c9bde0",
-  measurementId: "G-SM5W8152QH"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
