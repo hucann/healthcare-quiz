@@ -26,7 +26,8 @@ const Quiz = () => {
       setCurrentLevel(level);
     } else {
       // Level not found, redirect to levels page
-      navigate('/levels');
+      // navigate('/levels');
+      navigate('/generate-quiz')
     }
     setLoading(false);
   }, [levelId, navigate]);

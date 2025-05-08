@@ -14,7 +14,8 @@ const Login = () => {
       setError('');
       setLoading(true);
       await signInWithGoogle();
-      navigate('/levels');
+      // navigate('/levels');
+      navigate('/generate-quiz')
     } catch (error) {
       setError('Failed to sign in with Google. Please try again.');
       console.error(error);

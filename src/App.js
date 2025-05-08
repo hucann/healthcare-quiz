@@ -32,6 +32,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route
+            path="/generate-quiz"
+            element={
+              <ProtectedRoute>
+                <Generate />
+              </ProtectedRoute>
+            }
+          />
           <Route 
             path="/levels" 
             element={

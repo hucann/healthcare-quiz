@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import './Header.css';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
+import "./Header.css";
 
 const Header = () => {
   const { currentUser, logout } = useAuth();
@@ -10,9 +10,9 @@ const Header = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate('/');
+      navigate("/");
     } catch (error) {
-      console.error('Failed to log out', error);
+      console.error("Failed to log out", error);
     }
   };
 
@@ -25,13 +25,16 @@ const Header = () => {
         <nav className="nav">
           {currentUser ? (
             <>
-              <Link to="/levels" className="nav-link">Levels</Link>
+              {/* <Link to="/levels" className="nav-link">Levels</Link> */}
+              <Link to="/generate-quiz" className="nav-link">
+                Generate Quiz
+              </Link>
               <div className="user-info">
                 {currentUser.photoURL && (
-                  <img 
-                    src={currentUser.photoURL} 
-                    alt={currentUser.displayName} 
-                    className="user-avatar" 
+                  <img
+                    src={currentUser.photoURL}
+                    alt={currentUser.displayName}
+                    className="user-avatar"
                   />
                 )}
                 <span className="user-name">{currentUser.displayName}</span>
@@ -41,7 +44,9 @@ const Header = () => {
               </div>
             </>
           ) : (
-            <Link to="/login" className="nav-link login-link">Login</Link>
+            <Link to="/login" className="nav-link login-link">
+              Login
+            </Link>
           )}
         </nav>
       </div>

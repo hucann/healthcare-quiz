@@ -9,7 +9,9 @@ const Home = () => {
   
   const handleStartQuiz = () => {
     if (currentUser) {
-      navigate('/levels');
+      //navigate('/levels');
+      navigate('/generate-quiz')
+
     } else {
       navigate('/login');
     }
