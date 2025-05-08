@@ -19,29 +19,29 @@ const Home = () => {
   
   return (
     <div className="home-screen screen">
-      <h1>Healthcare Technology Quiz</h1>
+      <h1>Patient Education Quiz</h1>
       <p className="home-description">
-        Test your knowledge about various healthcare technologies through interactive quizzes!
+        Instead of reading long discharge instructions, learn how to care for your health through short, engaging quizzes.
       </p>
       <div className="features-container">
         <div className="feature">
-          <h3>🏥 Multiple Topics</h3>
-          <p>Explore telemedicine, AI diagnostics, and wearable health devices</p>
+          <h3>📚 Practical Knowledge</h3>
+          <p>Cover topics like disease basics, medications, lifestyle, and preventing complications.</p>
         </div>
         <div className="feature">
-          <h3>🎯 Progressive Learning</h3>
-          <p>Complete levels to unlock new challenges and track your progress</p>
+          <h3>🕹️ Gamified Learning</h3>
+          <p>Answer interactive questions, unlock levels, and get instant feedback on your responses.</p>
         </div>
         <div className="feature">
-          <h3>🧠 Educational Content</h3>
-          <p>Learn through detailed explanations for each question</p>
+          <h3>👨‍⚕️ Patient-Centered</h3>
+          <p>Designed for patients recovering in the hospital or preparing for discharge.</p>
         </div>
       </div>
       <button 
         className="btn start-btn" 
         onClick={handleStartQuiz}
       >
-        {currentUser ? 'Start Quiz' : 'Login to Start'}
+        {currentUser ? 'Start Learning' : 'Login to Start'}
       </button>
     </div>
   );

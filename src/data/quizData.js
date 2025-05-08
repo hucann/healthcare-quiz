@@ -1,196 +1,190 @@
-/**
- * Healthcare Technology Quiz Game Data
- * 
- * This file contains all the quiz levels and questions data.
- */
-
 const quizLevels = [
   {
-    id: "telemedicine",
-    title: "Telemedicine",
-    description: "Test your knowledge about remote healthcare delivery technologies.",
-    unlockRequirement: null, // First level is always unlocked
+    id: "diabetes-basics",
+    title: "Understanding Diabetes",
+    description: "Learn the fundamentals of type 2 diabetes, including causes, symptoms, and diagnosis.",
+    unlockRequirement: null,
     questions: [
       {
-        type: "mcq", // Multiple Choice Question
-        question: "What is telemedicine?",
+        type: "mcq",
+        question: "What is type 2 diabetes?",
         options: [
-          "A type of medical equipment used in hospitals",
-          "The use of technology to provide healthcare services remotely",
-          "A medication delivery service"
+          "A condition where the body resists insulin or doesn’t use it effectively",
+          "A condition where the body doesn't produce insulin",
+          "A temporary rise in blood sugar levels after meals"
         ],
-        correctAnswer: 1, // Index of the correct answer (0-based)
-        explanation: "Telemedicine is the use of digital technologies like video calls, phone, and messaging to provide healthcare services remotely when an in-person visit isn't necessary."
+        correctAnswer: 0,
+        explanation: "Type 2 diabetes is a chronic condition in which the body resists insulin or doesn’t use it efficiently, leading to elevated blood sugar levels."
       },
       {
         type: "mcq",
-        question: "Which of the following is NOT typically a benefit of telemedicine?",
+        question: "Which of the following is a common symptom of type 2 diabetes?",
         options: [
-          "Increased access to healthcare for rural patients",
-          "Reduced exposure to contagious illnesses",
-          "Ability to perform complex surgical procedures"
+          "Frequent urination and excessive thirst",
+          "Sudden weight gain",
+          "Improved vision"
         ],
-        correctAnswer: 2,
-        explanation: "While telemedicine offers many benefits like increased access and reduced exposure to illness, it cannot be used for complex surgical procedures that require physical presence and hands-on techniques."
+        correctAnswer: 0,
+        explanation: "Frequent urination and increased thirst are classic symptoms due to the body’s effort to flush out excess sugar."
       },
       {
         type: "mcq",
-        question: "What technology is essential for a basic telemedicine consultation?",
+        question: "Which test is commonly used to diagnose diabetes?",
         options: [
-          "Virtual reality headset",
-          "Internet connection and a device with camera/microphone",
-          "Specialized medical diagnostic equipment"
+          "Liver function test",
+          "HbA1c test",
+          "Complete blood count"
         ],
         correctAnswer: 1,
-        explanation: "A basic telemedicine consultation requires an internet connection and a device (computer, tablet, or smartphone) with a camera and microphone for video/audio communication."
+        explanation: "The HbA1c test measures average blood sugar over 2–3 months and is a standard diagnostic tool for diabetes."
       },
       {
         type: "mcq",
-        question: "Which patient scenario is LEAST suitable for telemedicine?",
+        question: "Which of the following is a potential complication of untreated diabetes?",
         options: [
-          "Follow-up appointment for medication management",
-          "Severe chest pain requiring immediate attention",
-          "Mental health counseling session"
+          "Kidney damage",
+          "Osteoporosis",
+          "Hearing loss"
         ],
-        correctAnswer: 1,
-        explanation: "Severe chest pain could indicate a heart attack or other life-threatening condition requiring immediate in-person emergency care. Follow-ups and mental health counseling are often well-suited for telemedicine."
+        correctAnswer: 0,
+        explanation: "High blood sugar over time can damage the kidneys, leading to diabetic nephropathy."
       },
       {
         type: "mcq",
-        question: "What is an important privacy consideration in telemedicine?",
+        question: "Is type 2 diabetes curable?",
         options: [
-          "Using public Wi-Fi for convenience",
-          "Ensuring HIPAA compliance for patient data protection",
-          "Sharing medical records on social media for second opinions"
+          "No, but it can be managed with lifestyle and medication",
+          "Yes, completely reversible with one treatment",
+          "Yes, by avoiding sugar alone"
         ],
-        correctAnswer: 1,
-        explanation: "HIPAA (Health Insurance Portability and Accountability Act) compliance is crucial in telemedicine to ensure patient data is protected and confidential during virtual consultations."
+        correctAnswer: 0,
+        explanation: "While not curable, type 2 diabetes can be managed effectively with the right lifestyle and medical approach."
       }
     ]
   },
   {
-    id: "ai-diagnostics",
-    title: "AI Diagnostics",
-    description: "Explore how artificial intelligence is transforming medical diagnostics.",
-    unlockRequirement: "telemedicine", // Requires completion of the telemedicine level
+    id: "diabetes-self-care",
+    title: "Managing Diabetes Daily",
+    description: "Explore how to manage diabetes through medication, checkups, and healthy daily routines.",
+    unlockRequirement: "diabetes-basics",
     questions: [
       {
         type: "mcq",
-        question: "What is the primary advantage of AI in medical image analysis?",
+        question: "Which of these is essential for monitoring diabetes at home?",
         options: [
-          "Completely replacing radiologists",
-          "Detecting patterns that might be missed by human eyes",
-          "Reducing the need for medical imaging altogether"
+          "Pulse oximeter",
+          "Glucometer",
+          "Blood pressure monitor"
         ],
         correctAnswer: 1,
-        explanation: "AI excels at detecting subtle patterns in medical images that might be missed by human eyes. It serves as a valuable tool to assist radiologists, not replace them."
+        explanation: "A glucometer allows patients to track blood glucose levels regularly at home."
       },
       {
         type: "mcq",
-        question: "Which of these is NOT a common application of AI in healthcare diagnostics?",
+        question: "Why is regular physical activity important for people with diabetes?",
         options: [
-          "Analyzing retinal scans for signs of diabetic retinopathy",
-          "Performing surgical procedures autonomously",
-          "Identifying potential lung nodules in CT scans"
-        ],
-        correctAnswer: 1,
-        explanation: "While AI is used for image analysis and diagnostic support, autonomous surgical procedures remain primarily in the research phase and require human supervision."
-      },
-      {
-        type: "mcq",
-        question: "What type of data is typically used to train AI diagnostic systems?",
-        options: [
-          "Only synthetic data created by computers",
-          "Large datasets of anonymized patient records and images",
-          "Real-time patient data without privacy protections"
-        ],
-        correctAnswer: 1,
-        explanation: "AI diagnostic systems are trained on large datasets of anonymized patient records and medical images to ensure both effectiveness and patient privacy."
-      },
-      {
-        type: "mcq",
-        question: "What is a significant challenge in implementing AI diagnostic tools?",
-        options: [
-          "Integration with existing healthcare workflows and systems",
-          "The low cost of AI systems compared to human diagnosticians",
-          "The complete accuracy of all AI diagnostic systems"
+          "It helps improve insulin sensitivity",
+          "It replaces the need for medication",
+          "It raises blood sugar"
         ],
         correctAnswer: 0,
-        explanation: "A major challenge is integrating AI tools with existing healthcare workflows, electronic health records, and clinical decision-making processes."
+        explanation: "Physical activity improves how the body uses insulin and helps lower blood glucose levels."
       },
       {
         type: "mcq",
-        question: "Which regulatory body oversees AI-based medical devices in the United States?",
+        question: "Which dietary habit helps in managing diabetes?",
         options: [
-          "Department of Technology",
-          "Food and Drug Administration (FDA)",
-          "Artificial Intelligence Medical Board"
+          "Skipping breakfast",
+          "Eating sugary snacks between meals",
+          "Choosing high-fiber, low-glycemic foods"
         ],
-        correctAnswer: 1,
-        explanation: "The FDA regulates AI-based medical devices in the US, evaluating their safety and effectiveness before they can be marketed for clinical use."
+        correctAnswer: 2,
+        explanation: "High-fiber, low-GI foods help control blood sugar and reduce insulin spikes."
+      },
+      {
+        type: "mcq",
+        question: "How often should people with diabetes visit their doctor for a check-up?",
+        options: [
+          "Once every 5 years",
+          "Only when symptoms appear",
+          "Every 3–6 months"
+        ],
+        correctAnswer: 2,
+        explanation: "Regular visits (every 3–6 months) help monitor blood sugar, medications, and prevent complications."
+      },
+      {
+        type: "mcq",
+        question: "What is a common dietary restriction for managing type 2 diabetes?",
+        options: [
+          "Only eating low-fat foods",
+          "Avoiding all fruits",
+          "Reducing processed sugars and refined carbs"
+        ],
+        correctAnswer: 2,
+        explanation: "Processed sugars and refined carbs can spike blood glucose and are commonly limited in diabetes care."
       }
     ]
   },
   {
-    id: "wearable-devices",
-    title: "Wearable Devices",
-    description: "Learn about the latest in wearable health monitoring technology.",
-    unlockRequirement: "ai-diagnostics", // Requires completion of the AI diagnostics level
+    id: "diabetes-prevention",
+    title: "Preventing Complications",
+    description: "Learn about long-term diabetes complications and how to prevent them through proactive care.",
+    unlockRequirement: "diabetes-self-care",
     questions: [
       {
         type: "mcq",
-        question: "Which vital sign is NOT commonly monitored by consumer wearable devices?",
+        question: "Which organ is most commonly affected by diabetes-related complications?",
         options: [
-          "Heart rate",
-          "Blood oxygen levels",
-          "Intracranial pressure"
-        ],
-        correctAnswer: 2,
-        explanation: "While heart rate and blood oxygen levels are commonly monitored by consumer wearables, intracranial pressure monitoring requires specialized medical devices not available in consumer wearables."
-      },
-      {
-        type: "mcq",
-        question: "What is a key benefit of continuous health monitoring through wearable devices?",
-        options: [
-          "It completely eliminates the need for doctor visits",
-          "It can detect trends and changes that might be missed in periodic check-ups",
-          "It provides 100% accurate diagnostic information"
+          "Lungs",
+          "Kidneys",
+          "Heart"
         ],
         correctAnswer: 1,
-        explanation: "Continuous monitoring can reveal trends and changes in health metrics over time that might not be apparent during occasional doctor visits, enabling earlier intervention."
+        explanation: "Diabetes can cause nephropathy, or kidney damage, over time due to high blood sugar levels."
       },
       {
         type: "mcq",
-        question: "Which of the following is a legitimate concern about wearable health devices?",
+        question: "What is diabetic neuropathy?",
         options: [
-          "Data privacy and security",
-          "They emit harmful radiation",
-          "They always provide medical-grade accuracy"
+          "Nerve damage due to high blood sugar",
+          "A skin infection common in diabetics",
+          "Excessive insulin production"
         ],
         correctAnswer: 0,
-        explanation: "Data privacy and security are significant concerns, as wearable devices collect sensitive health information that could potentially be compromised or misused."
+        explanation: "Diabetic neuropathy is nerve damage caused by long-term high blood sugar levels."
       },
       {
         type: "mcq",
-        question: "How are advanced wearable devices changing chronic disease management?",
+        question: "How can regular eye exams help diabetes patients?",
         options: [
-          "By curing chronic diseases",
-          "By enabling real-time monitoring and timely interventions",
-          "By eliminating the need for medication"
+          "Detect early signs of diabetic retinopathy",
+          "Improve blood pressure",
+          "Strengthen vision"
         ],
-        correctAnswer: 1,
-        explanation: "Advanced wearables enable real-time monitoring of chronic conditions, allowing for timely interventions and adjustments to treatment plans based on actual patient data."
+        correctAnswer: 0,
+        explanation: "Diabetic retinopathy is a common complication, and regular eye exams help detect it early."
       },
       {
         type: "mcq",
-        question: "What technology allows some wearable devices to detect falls in elderly users?",
+        question: "Which lifestyle habit is most effective in reducing the risk of diabetes complications?",
         options: [
-          "Facial recognition",
-          "Accelerometers and gyroscopes",
-          "GPS location only"
+          "Frequent snacking",
+          "Smoking",
+          "Regular exercise and balanced diet"
+        ],
+        correctAnswer: 2,
+        explanation: "Exercise and a healthy diet are key to managing blood sugar and preventing complications."
+      },
+      {
+        type: "mcq",
+        question: "What role does blood pressure control play in diabetes management?",
+        options: [
+          "It prevents skin infections",
+          "It reduces the risk of heart and kidney disease",
+          "It lowers cholesterol instantly"
         ],
         correctAnswer: 1,
-        explanation: "Accelerometers and gyroscopes detect sudden movements and changes in orientation that indicate a fall, allowing the device to alert emergency contacts or services."
+        explanation: "Maintaining healthy blood pressure helps prevent common diabetes-related cardiovascular and kidney complications."
       }
     ]
   }
