@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import quizLevels from '../data/quizData';
+import confetti from 'canvas-confetti';
 import './Result.css';
 
 const Result = () => {
@@ -17,31 +18,25 @@ const Result = () => {
   const { levelId, score, totalQuestions } = location.state || {};
   
   useEffect(() => {
-    // If no result data, redirect to levels
     if (!levelId || score === undefined || !totalQuestions) {
       navigate('/levels');
       return;
     }
-    
-    // Find next level
+
     const currentLevelIndex = quizLevels.findIndex(level => level.id === levelId);
     if (currentLevelIndex !== -1 && currentLevelIndex < quizLevels.length - 1) {
       setNextLevelId(quizLevels[currentLevelIndex + 1].id);
     }
-    
-    // Save progress to Firestore
+
     const saveProgress = async () => {
       try {
         if (currentUser) {
           const progressDocRef = doc(db, 'userProgress', currentUser.uid);
-          
-          // Get existing progress
           const progressDoc = await getDoc(progressDocRef);
           const existingProgress = progressDoc.exists() 
             ? progressDoc.data().completedLevels || {}
             : {};
-          
-          // Update progress
+
           await setDoc(progressDocRef, {
             completedLevels: {
               ...existingProgress,
@@ -52,6 +47,15 @@ const Result = () => {
               }
             }
           }, { merge: true });
+
+          // 🎉 Trigger confetti only for score >= 3
+          if (score >= 3) {
+            confetti({
+              particleCount: 120,
+              spread: 90,
+              origin: { y: 0.6 }
+            });
+          }
         }
       } catch (error) {
         console.error('Error saving progress:', error);
@@ -59,10 +63,10 @@ const Result = () => {
         setSaving(false);
       }
     };
-    
+
     saveProgress();
   }, [levelId, score, totalQuestions, currentUser, navigate]);
-  
+
   const getScoreMessage = () => {
     if (score === totalQuestions) {
       return "Perfect! You've mastered this topic!";
