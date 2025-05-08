@@ -49,6 +49,18 @@
   color: var(--light-text);
 }
 
+/* ✅ New failed status */
+.status-failed {
+  background-color: #ffe0e0;
+  color: #b00020;
+}
+
+.level-card.failed {
+  border: 2px solid #b00020;
+  background-color: #fff5f5;
+}
+
+/* Locked state remains unchanged */
 .level-card.locked {
   opacity: 0.7;
   cursor: not-allowed;

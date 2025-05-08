@@ -38,7 +38,7 @@ const Login = () => {
           disabled={loading}
         >
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.pngx" 
+            src="https://www.citypng.com/public/uploads/preview/google-logo-icon-gsuite-hd-701751694791470gzbayltphh.png" 
             alt="Google logo" 
             className="google-icon" 
           />

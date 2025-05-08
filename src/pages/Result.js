@@ -41,7 +41,7 @@ const Result = () => {
             completedLevels: {
               ...existingProgress,
               [levelId]: {
-                completed: true,
+                status: score >= 3 ? "completed" : "failed",
                 score,
                 totalQuestions
               }

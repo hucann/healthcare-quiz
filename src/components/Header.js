@@ -25,7 +25,7 @@ const Header = () => {
         <nav className="nav">
           {currentUser ? (
             <>
-              {/* <Link to="/levels" className="nav-link">Levels</Link> */}
+              <Link to="/levels" className="nav-link">Levels</Link>
               <Link to="/generate-quiz" className="nav-link">
                 Generate Quiz
               </Link>

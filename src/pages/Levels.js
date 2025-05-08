@@ -35,24 +35,30 @@ const Levels = () => {
   }, [currentUser]);
 
   const getLevelStatus = (level) => {
-    // If this level is completed already
-    if (userProgress[level.id]) {
-      return 'completed';
+    const progress = userProgress[level.id];
+  
+    // If level was attempted, check exact status
+    if (progress) {
+      if (progress.status === "completed") {
+        return "completed";
+      } else if (progress.status === "failed") {
+        return "failed";
+      }
     }
-
-    // If level has no unlock requirement
+  
+    // If it's the first level (always unlocked)
     if (level.unlockRequirement === null) {
-      return 'unlocked';
+      return "unlocked";
     }
-
-    // Unlock only if the requirement level is completed AND score >= 3
+  
+    // If previous level was completed (passed)
     const requirement = userProgress[level.unlockRequirement];
-    if (requirement && requirement.score >= 3) {
-      return 'unlocked';
+    if (requirement && requirement.status === "completed") {
+      return "unlocked";
     }
-
+  
     // Otherwise, level is locked
-    return 'locked';
+    return "locked";
   };
 
   if (loading) {
