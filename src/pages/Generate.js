@@ -9,6 +9,7 @@ const Generate = () => {
   const [currentConditions, setCurrentConditions] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [quiz, setQuiz] = useState(undefined);
   const navigate = useNavigate();
 
   const exampleMedicalHistory =
