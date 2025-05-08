@@ -1,190 +1,190 @@
 const quizLevels = [
   {
-    id: "diabetes-basics",
-    title: "Understanding Diabetes",
-    description: "Learn the fundamentals of type 2 diabetes, including causes, symptoms, and diagnosis.",
+    id: "diabetes-history-basics",
+    title: "Living with Diabetes Long-Term",
+    description: "Understand the impact of living with diabetes for many years, including risks and management priorities.",
     unlockRequirement: null,
     questions: [
       {
         type: "mcq",
-        question: "What is type 2 diabetes?",
+        question: "After 10 years of type 2 diabetes, which complication is most common?",
         options: [
-          "A condition where the body resists insulin or doesn’t use it effectively",
-          "A condition where the body doesn't produce insulin",
-          "A temporary rise in blood sugar levels after meals"
-        ],
-        correctAnswer: 0,
-        explanation: "Type 2 diabetes is a chronic condition in which the body resists insulin or doesn’t use it efficiently, leading to elevated blood sugar levels."
-      },
-      {
-        type: "mcq",
-        question: "Which of the following is a common symptom of type 2 diabetes?",
-        options: [
-          "Frequent urination and excessive thirst",
-          "Sudden weight gain",
-          "Improved vision"
-        ],
-        correctAnswer: 0,
-        explanation: "Frequent urination and increased thirst are classic symptoms due to the body’s effort to flush out excess sugar."
-      },
-      {
-        type: "mcq",
-        question: "Which test is commonly used to diagnose diabetes?",
-        options: [
-          "Liver function test",
-          "HbA1c test",
-          "Complete blood count"
-        ],
-        correctAnswer: 1,
-        explanation: "The HbA1c test measures average blood sugar over 2–3 months and is a standard diagnostic tool for diabetes."
-      },
-      {
-        type: "mcq",
-        question: "Which of the following is a potential complication of untreated diabetes?",
-        options: [
+          "Joint pain",
           "Kidney damage",
-          "Osteoporosis",
-          "Hearing loss"
+          "Asthma"
         ],
-        correctAnswer: 0,
-        explanation: "High blood sugar over time can damage the kidneys, leading to diabetic nephropathy."
+        correctAnswer: 1,
+        explanation: "Kidney damage (diabetic nephropathy) is a common complication in patients with long-term uncontrolled diabetes."
       },
       {
         type: "mcq",
-        question: "Is type 2 diabetes curable?",
+        question: "Which of the following is a long-term effect of uncontrolled blood sugar?",
         options: [
-          "No, but it can be managed with lifestyle and medication",
-          "Yes, completely reversible with one treatment",
-          "Yes, by avoiding sugar alone"
+          "Improved immune function",
+          "Increased energy levels",
+          "Nerve damage in the feet"
         ],
-        correctAnswer: 0,
-        explanation: "While not curable, type 2 diabetes can be managed effectively with the right lifestyle and medical approach."
+        correctAnswer: 2,
+        explanation: "Peripheral neuropathy, or nerve damage in the extremities, is a common complication of poorly controlled diabetes over time."
+      },
+      {
+        type: "mcq",
+        question: "Why are eye exams important for people with long-standing diabetes?",
+        options: [
+          "To check for cataracts only",
+          "To detect diabetic retinopathy early",
+          "To improve reading ability"
+        ],
+        correctAnswer: 1,
+        explanation: "Diabetic retinopathy is a leading cause of vision loss, and regular eye exams help detect early signs."
+      },
+      {
+        type: "mcq",
+        question: "How often should HbA1c be checked in patients with long-term diabetes?",
+        options: [
+          "Every 2 years",
+          "Every 6 months or as advised by a doctor",
+          "Only when symptoms worsen"
+        ],
+        correctAnswer: 1,
+        explanation: "The HbA1c test should typically be done every 3–6 months to monitor blood sugar control over time."
+      },
+      {
+        type: "mcq",
+        question: "Which of the following helps reduce long-term diabetes complications?",
+        options: [
+          "Eating high-sugar snacks",
+          "Skipping insulin on weekends",
+          "Consistent blood sugar monitoring"
+        ],
+        correctAnswer: 2,
+        explanation: "Regular monitoring allows early adjustments to medication and lifestyle to prevent complications."
       }
     ]
   },
   {
-    id: "diabetes-self-care",
-    title: "Managing Diabetes Daily",
-    description: "Explore how to manage diabetes through medication, checkups, and healthy daily routines.",
-    unlockRequirement: "diabetes-basics",
+    id: "hypertension-diabetes-care",
+    title: "Managing Diabetes with Hypertension",
+    description: "Learn how hypertension affects diabetes management and what lifestyle adjustments are critical.",
+    unlockRequirement: "diabetes-history-basics",
     questions: [
       {
         type: "mcq",
-        question: "Which of these is essential for monitoring diabetes at home?",
+        question: "Why is hypertension a concern for people with diabetes?",
         options: [
-          "Pulse oximeter",
-          "Glucometer",
-          "Blood pressure monitor"
+          "It decreases cholesterol",
+          "It increases the risk of heart and kidney disease",
+          "It cures diabetic symptoms"
         ],
         correctAnswer: 1,
-        explanation: "A glucometer allows patients to track blood glucose levels regularly at home."
+        explanation: "Having both conditions increases the risk of cardiovascular and kidney complications significantly."
       },
       {
         type: "mcq",
-        question: "Why is regular physical activity important for people with diabetes?",
+        question: "What is a recommended blood pressure target for patients with diabetes and hypertension?",
         options: [
-          "It helps improve insulin sensitivity",
-          "It replaces the need for medication",
-          "It raises blood sugar"
+          "Below 140/90 mmHg",
+          "Exactly 150/100 mmHg",
+          "Any value is fine if blood sugar is controlled"
         ],
         correctAnswer: 0,
-        explanation: "Physical activity improves how the body uses insulin and helps lower blood glucose levels."
+        explanation: "Guidelines generally recommend keeping blood pressure below 140/90 mmHg for diabetes patients."
       },
       {
         type: "mcq",
-        question: "Which dietary habit helps in managing diabetes?",
+        question: "Which lifestyle change helps control both diabetes and hypertension?",
         options: [
-          "Skipping breakfast",
-          "Eating sugary snacks between meals",
-          "Choosing high-fiber, low-glycemic foods"
+          "High-sodium snacks",
+          "Regular exercise and low-sodium diet",
+          "Energy drinks before bed"
         ],
-        correctAnswer: 2,
-        explanation: "High-fiber, low-GI foods help control blood sugar and reduce insulin spikes."
+        correctAnswer: 1,
+        explanation: "Exercise and dietary changes (especially lowering salt) benefit both conditions."
       },
       {
         type: "mcq",
-        question: "How often should people with diabetes visit their doctor for a check-up?",
+        question: "Which medication is commonly used to protect kidneys in diabetic patients with hypertension?",
         options: [
-          "Once every 5 years",
-          "Only when symptoms appear",
-          "Every 3–6 months"
+          "ACE inhibitors",
+          "Aspirin",
+          "Cough syrup"
         ],
-        correctAnswer: 2,
-        explanation: "Regular visits (every 3–6 months) help monitor blood sugar, medications, and prevent complications."
+        correctAnswer: 0,
+        explanation: "ACE inhibitors not only control blood pressure but also reduce kidney damage risk."
       },
       {
         type: "mcq",
-        question: "What is a common dietary restriction for managing type 2 diabetes?",
+        question: "What is one sign that your blood pressure may be too high?",
         options: [
-          "Only eating low-fat foods",
-          "Avoiding all fruits",
-          "Reducing processed sugars and refined carbs"
+          "Blurry vision or headaches",
+          "Increased appetite",
+          "Fever"
         ],
-        correctAnswer: 2,
-        explanation: "Processed sugars and refined carbs can spike blood glucose and are commonly limited in diabetes care."
+        correctAnswer: 0,
+        explanation: "Blurry vision and headaches are common signs of uncontrolled hypertension."
       }
     ]
   },
   {
-    id: "diabetes-prevention",
-    title: "Preventing Complications",
-    description: "Learn about long-term diabetes complications and how to prevent them through proactive care.",
-    unlockRequirement: "diabetes-self-care",
+    id: "lifestyle-adjustments",
+    title: "Daily Habits for Long-Term Health",
+    description: "Build habits to manage both diabetes and hypertension effectively for years to come.",
+    unlockRequirement: "hypertension-diabetes-care",
     questions: [
       {
         type: "mcq",
-        question: "Which organ is most commonly affected by diabetes-related complications?",
+        question: "What is the ideal plate composition for managing both diabetes and high blood pressure?",
         options: [
-          "Lungs",
-          "Kidneys",
-          "Heart"
+          "Half plate carbs, half plate meat",
+          "Half vegetables, one-quarter whole grains, one-quarter lean protein",
+          "All fruits and bread"
         ],
         correctAnswer: 1,
-        explanation: "Diabetes can cause nephropathy, or kidney damage, over time due to high blood sugar levels."
+        explanation: "A balanced plate with vegetables, whole grains, and lean proteins helps control sugar and blood pressure."
       },
       {
         type: "mcq",
-        question: "What is diabetic neuropathy?",
+        question: "What is one recommended physical activity for managing both conditions?",
         options: [
-          "Nerve damage due to high blood sugar",
-          "A skin infection common in diabetics",
-          "Excessive insulin production"
+          "Walking 30 minutes daily",
+          "Watching TV to relax",
+          "Skipping meals and napping"
         ],
         correctAnswer: 0,
-        explanation: "Diabetic neuropathy is nerve damage caused by long-term high blood sugar levels."
+        explanation: "Walking is safe and effective for blood sugar and cardiovascular health."
       },
       {
         type: "mcq",
-        question: "How can regular eye exams help diabetes patients?",
+        question: "Which habit should be avoided to reduce diabetes and hypertension complications?",
         options: [
-          "Detect early signs of diabetic retinopathy",
-          "Improve blood pressure",
-          "Strengthen vision"
-        ],
-        correctAnswer: 0,
-        explanation: "Diabetic retinopathy is a common complication, and regular eye exams help detect it early."
-      },
-      {
-        type: "mcq",
-        question: "Which lifestyle habit is most effective in reducing the risk of diabetes complications?",
-        options: [
-          "Frequent snacking",
           "Smoking",
-          "Regular exercise and balanced diet"
+          "Drinking water",
+          "Stretching after waking up"
         ],
-        correctAnswer: 2,
-        explanation: "Exercise and a healthy diet are key to managing blood sugar and preventing complications."
+        correctAnswer: 0,
+        explanation: "Smoking damages blood vessels and worsens both diabetes and high blood pressure outcomes."
       },
       {
         type: "mcq",
-        question: "What role does blood pressure control play in diabetes management?",
+        question: "What is a helpful technique to reduce stress and lower blood pressure?",
         options: [
-          "It prevents skin infections",
-          "It reduces the risk of heart and kidney disease",
-          "It lowers cholesterol instantly"
+          "Deep breathing or meditation",
+          "Eating more to distract yourself",
+          "Watching intense action movies"
+        ],
+        correctAnswer: 0,
+        explanation: "Relaxation techniques like meditation can lower stress and positively impact blood pressure."
+      },
+      {
+        type: "mcq",
+        question: "How can tracking help improve health in these conditions?",
+        options: [
+          "Tracking only weight once a year",
+          "Logging blood sugar, blood pressure, and medication daily",
+          "Only tracking exercise routines"
         ],
         correctAnswer: 1,
-        explanation: "Maintaining healthy blood pressure helps prevent common diabetes-related cardiovascular and kidney complications."
+        explanation: "Consistent tracking allows early adjustments and promotes accountability in daily management."
       }
     ]
   }
