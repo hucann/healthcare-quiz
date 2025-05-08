@@ -38,7 +38,7 @@ const Login = () => {
           disabled={loading}
         >
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" 
+            src="https://commons.wikimedia.org/wiki/Category:Google_SVG_logos#/media/File:Google_%22G%22_logo.svg" 
             alt="Google logo" 
             className="google-icon" 
           />
