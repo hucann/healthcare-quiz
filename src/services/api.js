@@ -2,6 +2,7 @@ import axios from "axios";
 
 const API_URL =
   process.env.REACT_APP_API_URL ||
+  "http://localhost:8888/api/quiz" ||
   "https://patient-care-quiz-backend.onrender.com/api/quiz";
 
 export const submitPatientData = async (patientData) => {
