@@ -14,7 +14,8 @@ const Login = () => {
       setError('');
       setLoading(true);
       await signInWithGoogle();
-      navigate('/levels');
+      // navigate('/levels');
+      navigate('/generate-quiz')
     } catch (error) {
       setError('Failed to sign in with Google. Please try again.');
       console.error(error);
@@ -37,7 +38,7 @@ const Login = () => {
           disabled={loading}
         >
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.pngx" 
             alt="Google logo" 
             className="google-icon" 
           />
