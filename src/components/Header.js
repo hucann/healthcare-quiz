@@ -20,7 +20,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          Healthcare Tech Quiz
+          Patient Education Quiz
         </Link>
         <nav className="nav">
           {currentUser ? (

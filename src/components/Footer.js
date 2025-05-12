@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p>&copy; {new Date().getFullYear()} Healthcare Technology Quiz</p>
+        <p>&copy; {new Date().getFullYear()} Patient Education Quiz</p>
         <div className="footer-links">
           <a href="#" className="footer-link">Privacy Policy</a>
           <a href="#" className="footer-link">Terms of Use</a>
